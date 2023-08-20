@@ -1,0 +1,359 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background-color: #111;
+  overflow: hidden;
+}
+
+.salute {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+
+}
+
+/* .saluteTextContainer {
+  flex: 1;
+
+} */
+
+.saluteImgContainer {
+  flex: 0;
+}
+
+.saluteText {
+  color: #c8c3bc;
+  font-size: 30vw;
+  cursor: default;
+}
+
+.saluteImg {
+  width: 100%;
+}
+
+.nameContainer {
+  height: 100vh;
+  background-color: rebeccapurple;
+}
+
+.name {
+  font-size: 14vw;
+  color: rgb(200, 195, 188);
+  cursor: default;
+  text-align: center;
+  line-height: 100vh;
+}
+
+.jobTitleContainer {
+  height: 100vh;
+}
+
+.dark {
+  background: url("./img/bg1.png");
+}
+
+.purple {
+  background: rebeccapurple url("./img/bg2.png");
+}
+
+.jobTitle {
+  font-size: 10vw;
+  color: #c8c3bc;
+  line-height: 100vh;
+  cursor: default;
+}
+
+/* projects */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+  padding: 0px 100px;
+}
+
+.projectsTitle {
+  font-size: 8vw;
+  color: #c8c3bc;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.phone {
+  flex: 1;
+  width: 300px;
+  height: 600px;
+  position: relative;
+}
+
+.phoneScreen {
+  width: 264px;
+  height: 567px;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  border-radius: 28px;
+  overflow: scroll;
+}
+
+.phoneScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.phoneApp {
+  width: 100%;
+}
+
+.projectDetail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.projectTitle {
+  font-size: 7vw;
+  color: #c8c3bc;
+}
+
+.projectDesc {
+  font-size: 20px;
+  color: #c8c3bc;
+  text-align: justify;
+  line-height: 40px;
+}
+
+.projectButton {
+  padding: 16px 20px;
+  background-color: transparent;
+  border: 2px solid #c8c3bc;
+  color: #c8c3bc;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectButton::after {
+  content: "View Demo";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 1s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c8c3bc;
+  color: #222;
+}
+
+.projectButton:hover.projectButton::after {
+  transform: translateX(100%);
+}
+
+.laptop {
+  width: 600px;
+  height: 379px;
+  flex: 1;
+  position: relative;
+}
+
+.laptopScreen {
+  width: 451px;
+  height: 283px;
+  position: absolute;
+  top: 18px;
+  left: 68px;
+  overflow: scroll;
+}
+
+.laptopApp {
+  width: 100%;
+}
+
+.laptopScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.githubContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.githubTitle {
+  font-size: 80px;
+  color: #c8c3bc;
+}
+
+.githubChart {
+  width: 820px;
+  text-align: center;
+}
+
+.dates {
+  padding: 16px;
+  color: #c8c3bc;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  background-color: #171c25;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 3s all ease;
+}
+
+.active:nth-child(4n) {
+  background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n+1) {
+  background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n) {
+  background-color: #063f24;
+}
+
+.githubSm {
+  display: none;
+}
+
+@media screen and (max-width:425px) {
+  .name {
+    text-align: left;
+  }
+
+  .projectDesc {
+    text-align: center;
+  }
+
+  .laptop {
+    width: 390px;
+    height: 200px;
+    flex: 1;
+    position: relative;
+  }
+
+  .laptopScreen {
+    width: 264px;
+    height: 165px;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    overflow: scroll;
+  }
+
+  .lapframe {
+    width: 350;
+  }
+
+  .laptopApp {
+    width: 100%;
+  }
+
+}
+
+
+@media screen and (max-width:1024px) {
+
+  .projects {
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .project {
+    flex-direction: column;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .phone,
+  .laptop {
+    transform: none !important;
+  }
+
+  .githubChart {
+    display: none;
+  }
+
+  .githubTitle {
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  .githubSm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #c8c3bc;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+
+/* Works on Firefox */
+body::-webkit-scrollbar {
+  width: 16px;
+  scrollbar-width: thin;
+  /* "auto" or "thin"  */
+  scrollbar-color: #888 #333;
+  /* scrollbar color, scrollbar track color */
+}
+
+/* Works on Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #333;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid #333;
+  /* creates padding around scroll thumb */
+}
